@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220922 08:56:36.476" rpa="false" schemaversion="3">
+<suite id="s1" name="Task3" source="/home/jazli/Downloads/RobotFrameWork/task3.robot">
+<test id="s1-t1" name="Login To Deriv" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://app.deriv.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220922 08:56:36.666" level="INFO">Opening browser 'chrome' to base url 'https://app.deriv.com/'.</msg>
+<status status="PASS" starttime="20220922 08:56:36.665" endtime="20220922 08:56:43.406"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220922 08:56:43.408" endtime="20220922 08:56:43.520"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//div[@class='btn-purchase__text_wrapper' and contains(.,'Rise')]</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220922 08:56:43.521" endtime="20220922 08:56:46.506"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>dt_login_button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220922 08:56:46.508" level="INFO">Clicking element 'dt_login_button'.</msg>
+<status status="PASS" starttime="20220922 08:56:46.507" endtime="20220922 08:56:49.298"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220922 08:56:49.298" endtime="20220922 08:56:49.314"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='email']</arg>
+<arg>jazli+7@besquare.com.my</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220922 08:56:49.315" level="INFO">Typing text 'jazli+7@besquare.com.my' into text field '//input[@type='email']'.</msg>
+<status status="PASS" starttime="20220922 08:56:49.314" endtime="20220922 08:56:49.397"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@type='password']</arg>
+<arg>Besquare@22</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220922 08:56:49.397" level="INFO">Typing text 'Besquare@22' into text field '//input[@type='password']'.</msg>
+<status status="PASS" starttime="20220922 08:56:49.397" endtime="20220922 08:56:49.487"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220922 08:56:49.488" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220922 08:56:49.487" endtime="20220922 08:56:53.119"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>dt_core_account-info_acc-info</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220922 08:56:53.119" endtime="20220922 08:56:53.135"/>
+</kw>
+<status status="PASS" starttime="20220922 08:56:36.664" endtime="20220922 08:56:53.136"/>
+</test>
+<test id="s1-t2" name="Navigate To Demo Account" line="19">
+<kw name="Wait Until Page Does Not Contain Element" library="SeleniumLibrary">
+<arg>//*[@aria-label="Loading interface..."]</arg>
+<doc>Waits until the element ``locator`` disappears from the current page.</doc>
+<status status="PASS" starttime="20220922 08:56:53.137" endtime="20220922 08:56:54.947"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>dt_core_account-info_acc-info</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220922 08:56:54.947" level="INFO">Clicking element 'dt_core_account-info_acc-info'.</msg>
+<status status="PASS" starttime="20220922 08:56:54.947" endtime="20220922 08:56:55.088"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="dt_core_account-switcher_demo-tab"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220922 08:56:55.089" level="INFO">Clicking element '//*[@id="dt_core_account-switcher_demo-tab"]'.</msg>
+<status status="PASS" starttime="20220922 08:56:55.089" endtime="20220922 08:56:55.217"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="dt_core_account-switcher_demo-tab"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220922 08:56:55.217" endtime="20220922 08:56:55.633"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="acc-switcher__id"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220922 08:56:55.634" level="INFO">Clicking element '//*[@class="acc-switcher__id"]'.</msg>
+<status status="PASS" starttime="20220922 08:56:55.633" endtime="20220922 08:56:56.031"/>
+</kw>
+<status status="PASS" starttime="20220922 08:56:53.137" endtime="20220922 08:56:56.032"/>
+</test>
+<test id="s1-t3" name="Navigate To Forex" line="26">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>//*[@class="cq-symbol-select-btn__container"]</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220922 08:56:56.033" endtime="20220922 08:56:56.055"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="cq-symbol-select-btn__container"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220922 08:56:56.055" level="INFO">Clicking element '//*[@class="cq-symbol-select-btn__container"]'.</msg>
+<status status="PASS" starttime="20220922 08:56:56.055" endtime="20220922 08:56:56.135"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220922 08:57:01.135" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220922 08:56:56.135" endtime="20220922 08:57:01.135"/>
+</kw>
+<status status="PASS" starttime="20220922 08:56:56.032" endtime="20220922 08:57:01.136"/>
+</test>
+<status status="PASS" starttime="20220922 08:56:36.477" endtime="20220922 08:57:01.137"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Task3">Task3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
